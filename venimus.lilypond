@@ -1,0 +1,64 @@
+\version "2.17.24"
+
+akordy_venimus = \chordmode { d1 g e:m7 d/fis }
+
+
+
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+
+  \header {
+    title = "Vánoce 2022"
+    subtitle = "kytara"
+  }  
+  \markup { \vspace #1 }
+
+  \score {
+    \header {
+      title = "Venimus adorare eum"
+      subtitle = "Přišli jsme se mu poklonit"
+      piece = "začátek"
+    }
+
+    <<
+      \new ChordNames {
+        \set chordChanges = ##t
+        \akordy_venimus
+      }
+
+      \new Staff {
+        \key d \major
+        \time 4/4
+        \relative c''' {
+        r4
+          a8 b8 a16[( b] a4.) |
+        r4
+          d8 e8 d16[( e] d4.) |
+        }
+
+        \relative c'' {
+          \tuplet 3/2 { b16[ d e] } fes8[ e] e16[( d]) b8 d4. |
+          a'8 fis16[( a] fis8) d[ d8]( e4.) |
+        }
+      }
+    >>
+  }
+
+  \score {
+    \header {
+      title = "Stále víc"
+      subtitle = ""
+      piece = "prostředek"
+    }
+
+    <<
+      \new Staff {
+        \key d \major
+        \time 4/4
+
+      }
+    >>
+  }
+}
