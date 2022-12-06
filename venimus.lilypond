@@ -2,8 +2,6 @@
 
 akordy_venimus = \chordmode { d1 g e:m7 d/fis }
 
-
-
 \book {
   \paper {
     print-all-headers = ##t
@@ -55,9 +53,21 @@ akordy_venimus = \chordmode { d1 g e:m7 d/fis }
 
     <<
       \new Staff {
-        \key d \major
+        \key a \major
         \time 4/4
-
+          \relative c'' {
+            r2. e8 a16[ gis] |
+            a2 r8  e8 a16[ e b' e,] |
+            cis'4  b16[( cis] b8) a a4 e8 | 
+            e8( fis2) r4 fis8 |
+            fis16( e) e( cis) cis( e) e( cis)
+            cis( b) b( cis) cis( b) b( cis) |
+            cis4 b8 e4 cis8
+            fis8[ gis8] |
+            a8 b8 cis4 b2 |
+            r8 a a[ b] cis2( |
+            cis4) b8[ a] b2 |
+          }
       }
     >>
   }
